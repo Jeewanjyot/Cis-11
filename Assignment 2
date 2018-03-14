@@ -1,1 +1,35 @@
+Jeewanjyot Dhanjal
+
+Week 2
+
+- [ ] 2.1.5 Section Review, Questions 1,2,3,4 and 5
+
+1. The cpu has the control unit, ALU, and the clock
+2. Data bus, control bus, address bus
+3. Registers are hard wired inside the cpu but conventional memory is outside the cpu so it takes more time for it to work.
+4. Fetch, decode, execute
+5. The additional steps are to fetch memory operands and store memory operands.
+
+- [ ] 2.4.3 Section Review, Question 5
+
+5. .33 ns
+
+- [ ] 2.5.2 Section Review, Questions 1, 3, 4, and 5
+
+1. High-level language functions
+3. They are needed because the drivers are the ones that know how to tell the hardware to do what they need to do.
+4. The BIOS level
+5. No the same BIOS would work
+
+- [ ] 2.8 Review Question 7, 8, 9, 10, 12, 19, 20, 25, and 26
+7. Floating-Point Unit
+8. 80
+9. true
+10. false
+12. false
+19. false
+20. false
+25. Operating system, BIOS, hardware levels
+26. It is faster to go directly
+
 
