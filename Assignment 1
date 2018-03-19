@@ -1,1 +1,139 @@
+Jeewanjyot Dhanjal
+
+Week 1
+
+- [ ] 1.1.3 Section Review, Questions 1,3, 8, 12
+1. An assembler converts source code from assembly language to machine language and a linker combines multiple individual files that the assembler made into one executable program.
+3. One to many means that one statement in the higher level language can mean multiple things in the machine language.
+8.
+12. X = (Y * 4) + 3.
+mov eax, Y
+imul eax, 4
+mov ebx,3
+add ebx
+mov X, eax
+- [ ] 1.2.1 Section Review, Questions 2, 3, 10
+2. The L0 program would translate it very quickly and then the L0 program could run the actual program which would be faster because executable code is faster.
+3. T
+10. level 2 or Instruction Set Architecture
+- [ ] 1.3.9 Section Review, Questions 2, 3, 5, 6, 7
+2.
+	a. 248
+	b. 202
+	c. 240
+3.
+	a. 17
+	b. 320
+	c. 30
+5.
+	a. 2
+	b. 4
+	c. 8
+	d. 16
+6.
+	a. 35DA
+	b. CEA3
+	c. FEDB
+7.
+	a. 1010 0100 0110 1001 0011 1111 1011 1100
+	b. 1011 0110 1001 0111 1100 0111 1010 0001
+	c. 0010 1011 0011 1101 1001 0100 0110 0001
+- [ ] 1.7.1 Short Answer, Questions 1-22 and 25
+1. The bit on the far left is the most significant bit
+2. 
+	a. 53
+	b. 150
+	c. 204
+3.
+	a. 394
+	b. 406
+	c. 289
+4. 6
+5. 
+	a. 16
+	b. 32
+	c. 64
+	d. 128
+6.
+	a. 12
+	b. 16
+	c. 16
+7.
+	a. 35DA
+	b. CEA3
+	c. FEDB
+8.
+	a. 0000 0001 0010 0110 1111 1001 1101 0100
+	b.  0110 1010 1100 1101 1111 1010 1001 0101
+	c. 1111 0110 1001 1011 1101 1100 0010 1010
+9.
+	a. 58
+	b. 447
+	c. 4097
+10.
+	a. 98
+	b. 1203
+	c. 671
+11.
+	a. -18
+	b. -14B
+12.
+	a. -15
+	b. -2D
+13.
+	a. 27641
+	b. 49443
+14.
+	a. 19666
+	b. 33328
+15.
+	a. 181
+	b. 42
+	c. 240
+16.
+	a. 128
+	b. 204
+	c. 183
+17.
+	a. 1111111111111011
+	b. 1111111111010110
+	c. 1111111111110000
+18.
+	a. 1111111110111000
+	b. 1111111110011110
+	c. 1111111111100110
+19.
+	a. 2738
+	b. 4358
+20.
+	a. 2946
+	b. 4886
+21. Hex 42 Decimal 66
+22. Hex 47 Decimal 71
+25. X  ¬X   Y  ¬X ∨ Y
+   F   T   F    T 
+   F   T   T    T
+   T   F   F    F
+   T   F   T    T
+- [ ] 1.7.2 Algorithm Workbench, Choose any 1 question
+//1. Write a function that receives a string containing a 16 - bit binary integer.The function must
+//return the string’s integer value.
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main()
+{
+	string binary;
+	return 0;
+}
+- [ ] EXTRA CREDIT: 1.4.2 Section Review, Questions 1-5 (1 point extra credit per question)
+1.
+2.
+3.
+4.
+5.
+- [ ] Upload your assignment to GitHub
+- [ ] Email james.wilson@rccd.edu with the url to the source code on GitHub
 
