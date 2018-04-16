@@ -1,0 +1,89 @@
+Jeewanjyot Dhanjal
+Assignment 6
+
+- [ ] 5.9 Programming Exercises, Questions 7, 10    
+
+7. Random Screen Locations
+Write a program that displays a single character at 100 random screen locations, using a timing delay of 100 milliseconds. Hint: Use the GetMaxXY procedure to determine the current size of the console window.
+
+ExitProcess PROTO
+WriteInt64 PROTO
+WriteString PROTO
+Crlf Proto
+ReadInt64 PROTO
+Random64 PROTO
+.data
+
+.code
+main proc
+	mov rdx,100
+	XOR rdx,rdx
+	call Random64
+	mov rcx,100
+	div rcx
+	mov rcx,rdx
+L1:
+	mov rax,rcx
+	call WriteInt64
+Loop L1
+	call ReadInt64
+	call Crlf
+
+	; loop random number of times
+	; get a random number
+	; write our random number to the screen
+	; end loop
+	call ReadInt64
+main endp
+
+end
+
+
+
+
+
+10. Fibonacci Generator
+Write a procedure that produces N values in the Fibonacci number series and stores them in an array of doubleword. Input parameters should be a pointer to an array of doubleword, a counter of the number of values to generate. Write a test program that calls your procedure, passing N = 47. The first value in the array will be 1, and the last value will be 2,971,215,073. Use the Visual Studio debugger to open and inspect the array contents.
+
+ExitProcess proto
+WriteInt64  proto
+Crlf        proto
+.data
+
+nMinus2 QWORD 0
+nMinus1 QWORD 1
+n       QWORD ?
+
+.code
+main proc
+	mov rcx, 47
+
+	mov rax, nMinus2
+	call WriteInt64
+	call Crlf
+
+	mov rax, nMinus1
+	call WriteInt64
+	call Crlf
+
+	STARTLOOP:
+
+		mov r9, nMinus2
+		add r9, nMinus1
+		mov n, r9
+
+		mov rax, n
+		call WriteInt64
+		call Crlf
+
+		mov r9, nMinus1
+		mov nMinus2, r9
+	
+		mov r9, n
+		mov nMinus1, r9
+
+	LOOP STARTLOOP
+
+	call ExitProcess
+main endp
+end
