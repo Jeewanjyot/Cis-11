@@ -1,0 +1,110 @@
+- [ ] 6.11.2 Programming Exercises, Questions 5 & 6 (submit these as one source code file)
+
+ExitProcess PROTO
+WriteString PROTO
+ReadString PROTO
+Crlf PROTO
+Str_compare PROTO
+
+.data
+	CaseTable BYTE 'A' ; lookup value
+		QWORD Process_A ; address of procedure
+	EntrySize = ($ - CaseTable)
+		BYTE 'B'
+		QWORD Process_B
+		BYTE 'C'
+		QWORD Process_C
+		BYTE 'D'
+		QWORD Process_D
+	NumberOfEntries = ($ - CaseTable) / EntrySize
+
+	prompt BYTE "Press A, B, C, D, or E"
+	msgA BYTE "x AND y",0
+	msgB BYTE "x OR y",0
+	msgC BYTE "x NOT y",0
+	msgD BYTE "x XOR y",0
+	msgE BYTE "x Exit Program y",0
+	choice BYTE "Q",0
+
+	menu1 BYTE "A/ x AND y",0
+	menu2 BYTE "B/ x OR y",0
+	menu3 BYTE "C/ x NOT y",0
+	menu4 BYTE "D/ x XOR y",0
+	menu5 BYTE "E/ x Exit Program y",0
+
+.code
+main proc
+
+	mov rdx, OFFSET menu1
+	call WriteString
+	call Crlf
+	
+	mov rdx, OFFSET menu2
+	call WriteString
+	call Crlf	
+
+	mov rdx, OFFSET menu3
+	call WriteString
+	call Crlf
+	
+	mov rdx, OFFSET menu4
+	call WriteString
+	call Crlf
+
+	mov rdx, OFFSET menu5
+	call WriteString
+	call Crlf
+
+	mov rdx, OFFSET choice
+	mov rcx, 2
+	call ReadString
+
+	mov rbx, OFFSET caseTable
+	mov rcx, numberOfEntries
+	movzx r8, BYTE PTR [choice]
+
+	L1:
+		movzx r9, BYTE PTR [rbx]
+		cmp r8, r9
+		jne L2
+		call NEAR PTR [rbx + 1]
+		call WriteString
+		call Crlf
+		jmp L3
+	L2:
+		add rbx,entrySize
+		loop L1
+	L3:
+		call ExitProcess
+main endp
+
+Process_A PROC
+	mov rdx, OFFSET msgA
+	call WriteString
+	ret
+Process_A ENDP
+
+Process_B PROC
+	mov rdx, OFFSET msgB
+	call WriteString
+	ret
+Process_B ENDP
+
+Process_C PROC
+	mov rdx, OFFSET msgC
+	call WriteString
+	ret
+Process_C ENDP
+
+Process_D PROC
+	mov rdx, OFFSET msgD
+	call WriteString
+	ret
+Process_D ENDP
+
+Process_E PROC
+	mov rdx, OFFSET msgE
+	call WriteString
+	ret
+Process_E ENDP
+end
