@@ -129,11 +129,10 @@ int main()
 	return 0;
 }
 - [ ] EXTRA CREDIT: 1.4.2 Section Review, Questions 1-5 (1 point extra credit per question)
-1.
-2.
-3.
-4.
-5.
+1. Not x or y
+2. x and y
+3. T
+4. F
+5. T
 - [ ] Upload your assignment to GitHub
 - [ ] Email james.wilson@rccd.edu with the url to the source code on GitHub
-
